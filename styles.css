@@ -672,11 +672,16 @@ body {
     margin-bottom: 40px;
 }
 
+.footer-logo {
+    text-align: center;
+}
+
 .footer-logo-image {
     width: 80px;
     height: 80px;
     margin-bottom: 20px;
-    filter: brightness(0) invert(1); /* Make logo white for dark footer */
+    /* Make logo white for dark footer */
+    /* filter: brightness(0) invert(1);  */
     transition: transform 0.3s ease;
 }
 
