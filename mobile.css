@@ -1,0 +1,600 @@
+/* Mobile-specific styles for BOLA JAPAN website */
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: rgba(26, 26, 26, 0.98);
+        width: 100%;
+        height: calc(100vh - 80px);
+        text-align: center;
+        transition: 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        z-index: 1001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .nav-menu li {
+        margin: 20px 0;
+    }
+
+    .hamburger span {
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Ensure hamburger is visible on mobile */
+    .hamburger {
+        display: flex !important;
+        position: relative;
+        z-index: 1002;
+    }
+
+    /* Debug: Make sure nav menu is visible when active */
+    .nav-menu.active {
+        left: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: flex !important;
+    }
+
+    /* Hero Section Mobile - Fixed Layout */
+    .hero {
+        min-height: 100vh;
+        padding: 80px 0 40px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .hero-visual {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Floating elements for mobile */
+    .roe-element {
+        width: 60px;
+        height: 90px;
+    }
+
+    .roe-element:nth-child(1) {
+        top: 10%;
+        left: 10%;
+    }
+
+    .roe-element:nth-child(2) {
+        top: 50%;
+        right: 20%;
+    }
+
+    .roe-element:nth-child(3) {
+        bottom: 10%;
+        left: 30%;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 60px 0 30px 0;
+    }
+
+    .hero-content {
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        line-height: 1.4;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        max-width: 200px;
+    }
+
+    .hero-visual {
+        height: 200px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .about-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    .about-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .about-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+
+    .product-img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .process-img {
+        border-radius: 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-img {
+        height: 200px;
+    }
+
+    /* Fix image sizes for mobile */
+    .product-image {
+        height: 200px;
+    }
+
+    .timeline-image {
+        height: 150px;
+        margin: 0 20px;
+    }
+
+    .gallery-item {
+        margin-bottom: 15px;
+    }
+
+    .product-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-info p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .timeline-content {
+        padding: 25px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .contact-item {
+        padding: 20px;
+    }
+
+    .contact-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust floating elements for very small screens */
+    .roe-element {
+        width: 40px;
+        height: 60px;
+    }
+
+    .floating-elements {
+        display: none; /* Hide on very small screens */
+    }
+
+    /* Hide quick nav on very small screens */
+    .quick-nav {
+        display: none;
+    }
+
+    /* Further optimize images for very small screens */
+    .product-image {
+        height: 180px;
+    }
+
+    .timeline-image {
+        height: 120px;
+        margin: 0 15px;
+    }
+
+    .gallery-img {
+        height: 180px;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .nav-menu {
+        top: 60px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-text {
+        font-weight: 800;
+    }
+
+    .btn-primary, .btn-secondary {
+        font-weight: 700;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .product-card:hover {
+        transform: none;
+    }
+
+    .about-card:hover {
+        transform: none;
+    }
+
+    .contact-item:hover {
+        transform: none;
+    }
+
+    /* Increase touch targets */
+    .nav-menu a {
+        padding: 15px 0;
+    }
+
+    .btn-primary, .btn-secondary {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        min-height: 44px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .roe-element {
+        animation: none;
+    }
+
+    .scroll-indicator {
+        animation: none;
+    }
+
+    .title-line {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .hero-subtitle {
+        animation: none;
+        opacity: 0.9;
+    }
+
+    .hero-buttons {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background: rgba(26, 26, 26, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu a {
+        color: #fff;
+    }
+
+    .hamburger span {
+        background: #fff;
+    }
+
+    .about {
+        background: #1a1a1a;
+    }
+
+    .about-card {
+        background: #2a2a2a;
+        color: #fff;
+    }
+
+    .about-card h3 {
+        color: #fff;
+    }
+
+    .about-card p {
+        color: #ccc;
+    }
+
+    .company-info {
+        background: #2a2a2a;
+        color: #fff;
+    }
+
+    .info-label {
+        color: #ccc;
+    }
+
+    .info-value {
+        color: #fff;
+    }
+
+    .products {
+        background: #1a1a1a;
+    }
+
+    .product-card {
+        background: #2a2a2a;
+    }
+
+    .product-info h3 {
+        color: #fff;
+    }
+
+    .product-info p {
+        color: #ccc;
+    }
+
+    .feature {
+        background: #3a3a3a;
+        color: #ccc;
+    }
+
+    .process {
+        background: #1a1a1a;
+    }
+
+    .timeline-content {
+        background: #2a2a2a;
+        color: #fff;
+    }
+
+    .timeline-content h3 {
+        color: #fff;
+    }
+
+    .timeline-content p {
+        color: #ccc;
+    }
+
+    .contact {
+        background: #1a1a1a;
+    }
+
+    .contact-item {
+        background: #2a2a2a;
+    }
+
+    .contact-item h4 {
+        color: #fff;
+    }
+
+    .contact-item p {
+        color: #ccc;
+    }
+
+    .contact-form {
+        background: #2a2a2a;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background: #3a3a3a;
+        border-color: #4a4a4a;
+        color: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #ff6b35;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #888;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hero-buttons,
+    .floating-elements,
+    .scroll-indicator,
+    .contact-form,
+    .footer {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        background: white;
+        color: black;
+    }
+
+    .hero-title {
+        color: black;
+    }
+
+    .hero-subtitle {
+        color: #666;
+    }
+
+    .section-header h2 {
+        color: black;
+        background: none;
+        -webkit-text-fill-color: black;
+    }
+
+    .about-card,
+    .company-info,
+    .product-card,
+    .timeline-content,
+    .contact-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .product-image {
+        background: #f0f0f0;
+    }
+
+    .image-placeholder {
+        background: #f0f0f0;
+        color: #666;
+    }
+}

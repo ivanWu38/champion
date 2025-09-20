@@ -1,0 +1,60 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="distress" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" fill="url(#bgGradient)"/>
+  
+  <!-- Distressed Circle with gradient -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#circleGradient)" stroke-width="2.5" 
+          stroke-dasharray="20,8,15,8,25,8,18,8" 
+          filter="url(#distress)" opacity="0.85"/>
+  
+  <!-- Additional decorative circles -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="white" stroke-width="1" opacity="0.3"/>
+  <circle cx="100" cy="100" r="65" fill="none" stroke="white" stroke-width="0.5" opacity="0.2"/>
+  
+  <!-- Central Character 鳥 with enhanced styling -->
+  <text x="100" y="115" font-family="serif" font-size="65" font-weight="bold" 
+        fill="white" text-anchor="middle" filter="url(#glow)">
+    鳥
+  </text>
+  
+  <!-- BOLA Letters with enhanced positioning -->
+  <text x="35" y="35" font-family="serif" font-size="18" font-weight="bold" fill="white" opacity="0.9">B</text>
+  <text x="165" y="35" font-family="serif" font-size="18" font-weight="bold" fill="white" opacity="0.9">O</text>
+  <text x="35" y="165" font-family="serif" font-size="18" font-weight="bold" fill="white" opacity="0.9">L</text>
+  <text x="165" y="165" font-family="serif" font-size="18" font-weight="bold" fill="white" opacity="0.9">A</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="15" r="2" fill="white" opacity="0.7"/>
+  <circle cx="100" cy="185" r="2" fill="white" opacity="0.7"/>
+  <circle cx="15" cy="100" r="2" fill="white" opacity="0.7"/>
+  <circle cx="185" cy="100" r="2" fill="white" opacity="0.7"/>
+  
+  <!-- Additional decorative dots -->
+  <circle cx="85" cy="25" r="1" fill="white" opacity="0.5"/>
+  <circle cx="115" cy="25" r="1" fill="white" opacity="0.5"/>
+  <circle cx="85" cy="175" r="1" fill="white" opacity="0.5"/>
+  <circle cx="115" cy="175" r="1" fill="white" opacity="0.5"/>
+</svg>

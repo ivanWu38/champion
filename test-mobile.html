@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLA JAPAN - モバイルテスト</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        .test-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .test-header h1 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+        }
+        .test-section h2 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+        .mobile-preview {
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+        .mobile-preview h3 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>BOLA JAPAN モバイル修正テスト</h1>
+            <p>モバイル版の表示問題を修正しました</p>
+        </div>
+
+        <div class="test-section">
+            <h2>🔧 修正内容</h2>
+            <ul class="feature-list">
+                <li>モバイル版のHero Sectionレイアウトを修正</li>
+                <li>レスポンシブデザインの改善</li>
+                <li>小画面デバイスでの表示最適化</li>
+                <li>日本語対応の完全実装</li>
+                <li>クイックナビゲーションボタンの追加</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>📱 モバイル対応</h2>
+            <ul class="feature-list">
+                <li>スマートフォン（768px以下）の最適化</li>
+                <li>タブレット（769px-1024px）の調整</li>
+                <li>小画面スマートフォン（480px以下）の特別対応</li>
+                <li>横向きモードの対応</li>
+                <li>タッチデバイスの最適化</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🇯🇵 日本語対応</h2>
+            <ul class="feature-list">
+                <li>すべてのテキストを日本語に変更</li>
+                <li>日本語フォームのバリデーション</li>
+                <li>日本語エラーメッセージ</li>
+                <li>日本語通知システム</li>
+                <li>日本語ナビゲーション</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>⚡ クイックナビゲーション</h2>
+            <ul class="feature-list">
+                <li>右側の固定ナビゲーションボタン</li>
+                <li>各セクションへの素早いジャンプ</li>
+                <li>現在のセクションのハイライト表示</li>
+                <li>ホバーエフェクトとアニメーション</li>
+                <li>モバイルでの適切なサイズ調整</li>
+            </ul>
+        </div>
+
+        <div class="mobile-preview">
+            <h3>📱 モバイル表示の改善点</h3>
+            <ul class="feature-list">
+                <li>Hero Sectionの中央配置と適切なスペーシング</li>
+                <li>ボタンのサイズと配置の最適化</li>
+                <li>テキストサイズの調整</li>
+                <li>フローティング要素の調整</li>
+                <li>ナビゲーションの改善</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 テスト項目</h2>
+            <ul class="feature-list">
+                <li>モバイルデバイスでの表示確認</li>
+                <li>クイックナビゲーションボタンの動作確認</li>
+                <li>日本語フォームの動作確認</li>
+                <li>レスポンシブデザインの確認</li>
+                <li>アニメーションとインタラクションの確認</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn">メインサイトを確認</a>
+        </div>
+    </div>
+</body>
+</html>

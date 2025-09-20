@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLA JAPAN - モバイルテスト</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        .test-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .test-header h1 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+        }
+        .test-section h2 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+        .mobile-preview {
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+        .mobile-preview h3 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+        .debug-info {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>BOLA JAPAN モバイル機能テスト</h1>
+            <p>ハンバーガーメニューと画像サイズの修正</p>
+        </div>
+
+        <div class="test-section">
+            <h2>🔧 修正内容</h2>
+            <ul class="feature-list">
+                <li>ハンバーガーメニューの表示問題を修正</li>
+                <li>モバイルでの画像サイズを最適化</li>
+                <li>z-indexの問題を解決</li>
+                <li>デバッグログを追加</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>📱 ハンバーガーメニュー修正</h2>
+            <ul class="feature-list">
+                <li>モバイルでハンバーガーメニューが表示されるように修正</li>
+                <li>クリック時のアニメーション効果を追加</li>
+                <li>メニュー項目のクリックでメニューが閉じる機能</li>
+                <li>z-indexの調整で他の要素の上に表示</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🖼️ 画像サイズ最適化</h2>
+            <ul class="feature-list">
+                <li>製品画像：200px → 180px（小画面）</li>
+                <li>製程画像：200px → 150px（小画面）</li>
+                <li>ギャラリー画像：250px → 200px（小画面）</li>
+                <li>ギャラリー画像：200px → 180px（超小画面）</li>
+                <li>製程画像：150px → 120px（超小画面）</li>
+            </ul>
+        </div>
+
+        <div class="mobile-preview">
+            <h3>📱 モバイル表示の改善点</h3>
+            <ul class="feature-list">
+                <li>ハンバーガーメニューが正しく表示される</li>
+                <li>画像サイズが画面に適切に収まる</li>
+                <li>タッチ操作が最適化されている</li>
+                <li>レスポンシブデザインが改善されている</li>
+            </ul>
+        </div>
+
+        <div class="debug-info">
+            <h3>🐛 デバッグ情報</h3>
+            <p><strong>ハンバーガーメニューのテスト:</strong></p>
+            <ul>
+                <li>ブラウザの開発者ツールを開く</li>
+                <li>コンソールタブを確認</li>
+                <li>ハンバーガーメニューをクリック</li>
+                <li>"Hamburger clicked!" メッセージが表示されるか確認</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 テスト項目</h2>
+            <ul class="feature-list">
+                <li>モバイルデバイスでのハンバーガーメニュー動作確認</li>
+                <li>画像サイズの適切性確認</li>
+                <li>タッチ操作の反応性確認</li>
+                <li>レスポンシブデザインの確認</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn">メインサイトを確認</a>
+        </div>
+    </div>
+</body>
+</html>
